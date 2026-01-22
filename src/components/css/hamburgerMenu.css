@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+.hamburgerBtn {
+  @apply w-8 h-0.5 bg-white rounded-full transition-colors group-hover:bg-[#a855f7];
+}
+
+/* Optional: Smoothly lock scroll when menu is open */
+body:has(.fullscreen-menu-open) {
+  overflow: hidden;
+}
+
+/* Custom Gradient Text for links if you want to reuse your previous style */
+.menu-link-gradient {
+  @apply hover:bg-clip-text hover:text-transparent;
+  background-image: linear-gradient(to right, #717cf5, #f25c89);
+}

@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+	@keyframes gradient-flow {
+		from {
+			background-position: 0% center;
+		}
+		to {
+			background-position: 200% center;
+		}
+	}
+
+	@keyframes weight-pulse {
+		0%,
+		100% {
+			font-weight: 600;
+		}
+		50% {
+			font-weight: 700;
+		}
+	}
+
+	/* Define the custom animation */
+	--animate-combine-flow-pulse:
+		gradient-flow 3s linear infinite, weight-pulse 2s ease-in-out infinite;
+    
+    --animate-gradient-flow:
+    gradient-flow 3s linear infinite
+}
+
+/* Custom utility for the looping gradient background */
+.bg-moving-gradient {
+	background-image: linear-gradient(
+		to right,
+		#717cf5,
+		/* Blue */ #b465da,
+		/* Purple */ #f25c89,
+		/* Pink */ #717cf5 /* Blue again (Must match the start for seamless loop) */
+	);
+	/* Make the background twice as wide as the text */
+	background-size: 200% auto;
+}
