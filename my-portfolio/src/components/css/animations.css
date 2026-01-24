@@ -20,12 +20,23 @@
 		}
 	}
 
+	@keyframes smooth-flow {
+		0% {
+			background-position: 0% 50%;
+		}
+		100% {
+			background-position: 300% 50%;
+		}
+	}
+
+	/* Slower, smoother flow */
+	--animate-smooth-flow: smooth-flow 6s linear infinite;
+
 	/* Define the custom animation */
 	--animate-combine-flow-pulse:
 		gradient-flow 3s linear infinite, weight-pulse 2s ease-in-out infinite;
-    
-    --animate-gradient-flow:
-    gradient-flow 3s linear infinite
+
+	--animate-gradient-flow: gradient-flow 3s linear infinite;
 }
 
 /* Custom utility for the looping gradient background */
@@ -39,4 +50,17 @@
 	);
 	/* Make the background twice as wide as the text */
 	background-size: 200% auto;
+}
+
+.bg-chat-header, .bg-gradient-linear {
+  background-image: linear-gradient(
+    to right,
+    #717cf5, /* Blue */
+    #a855f7, /* Violet */
+    #f25c89, /* Pink */
+    #a855f7, /* Violet (Transition) */
+    #717cf5  /* Blue (Loop Start) */
+  );
+  /* 300% makes the transition between colors much more gradual */
+  background-size: 300% 100%;
 }

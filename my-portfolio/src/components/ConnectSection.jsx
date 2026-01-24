@@ -21,7 +21,7 @@ const socialLinks = [
 	//   { name: "Discord", icon: <Share2 size={20} />, color: "text-indigo-400", href: "#" },
 	//   { name: "Twitter", icon: <Twitter size={20} />, color: "text-sky-400", href: "#" },
 	//   { name: "WhatsApp", icon: <MessageCircle size={20} />, color: "text-green-500", href: "#" },
-	{ name: "GitHub", icon: <Github size={20} />, color: "text-white", href: "#" },
+	{ name: "GitHub", icon: <Github size={20} />, color: "text-white", href: "https://github.com/aniforever24" },
 	//   { name: "YouTube", icon: <Youtube size={20} />, color: "text-red-500", href: "#" },
 	//   { name: "Hacker News", icon: <Globe size={20} />, color: "text-orange-500", href: "#" },
 ];
@@ -119,6 +119,7 @@ const ConnectSection = () => {
 							<motion.a
 								key={idx}
 								href={social.href}
+								target="_blank"
 								variants={itemVariants}
 								whileHover={{ scale: 1.05, y: -5 }}
 								className="flex items-center justify-center gap-3 p-4 bg-[#0b0e14] border border-gray-800/50 rounded-xl hover:border-purple-500/50 transition-colors group"

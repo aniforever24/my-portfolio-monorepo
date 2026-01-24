@@ -35,12 +35,12 @@ const skillGroups = [
 	{
 		title: "Tools & Others",
 		icon: <Hammer className="text-[#a855f7]" size={24} />,
-		skills: ["Git", "GitHub", "REST APIs", "Webhooks", "LLMs", "jQuery"],
+		skills: ["Git", "GitHub", "REST APIs",  "Webhooks", "LLMs", "jQuery"],
 	},
 	{
 		title: "Integrations",
 		icon: <Zap className="text-[#a855f7]" size={24} />,
-		skills: ["Stripe"],
+		skills: ["RESTful APIs", "Frontend-Backend Data Flow", "JWT-based Authentication", "Environment & Config Management", "Third-party API integration","Stripe"],
 	},
 ];
 
@@ -79,7 +79,7 @@ const TechnicalSkills = () => {
 				>
 					<h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight font-['Baloo_2']">
 						Technical{" "}
-						<span className="bg-clip-text text-transparent bg-gradient-to-r from-[#717cf5] via-[#a855f7] to-[#f25c89] animate-gradient-flow bg-[length:200%_auto]">
+						<span className="bg-clip-text text-transparent bg-gradient-linear animate-smooth-flow [animation-duration:4s] bg-[length:200%_auto]">
 							Skills
 						</span>
 					</h2>
@@ -114,7 +114,7 @@ const TechnicalSkills = () => {
 											scale: 1.05,
 											backgroundColor: "rgba(168, 85, 247, 0.2)",
 										}}
-										className="px-4 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/20 text-[#a855f7] text-sm font-medium transition-colors cursor-default"
+										className="px-4 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/20 text-[#b76cfe] text-sm font-medium transition-colors cursor-default"
 									>
 										{skill}
 									</motion.span>

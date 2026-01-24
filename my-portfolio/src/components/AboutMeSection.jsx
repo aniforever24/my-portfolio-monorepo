@@ -15,6 +15,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Code2, Database, Terminal, Zap, Server } from 'lucide-react';
+import "./css/animations.css"
 
 const skills = [
     { name: "React", level: 95 },
@@ -64,7 +65,7 @@ const AboutSection = () => {
           <motion.div variants={itemVariants} className="flex items-center gap-4 font-['Baloo_2']">
              <div className="w-12 h-0.5 bg-purple-500"></div>
              <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
-						<span className="bg-clip-text text-transparent bg-linear-to-r from-[#717cf5] via-[#a855f7] to-[#f25c89] animate-gradient-flow bg-size-[200%_auto]">
+						<span className="bg-clip-text text-transparent bg-gradient-linear animate-smooth-flow [animation-duration:4s] bg-size-[200%_auto]">
 						About{" "}
 						</span>
 							Me
