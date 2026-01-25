@@ -41,7 +41,7 @@ const ConnectSection = () => {
 	};
 
 	return (
-		<section className="relative py-24 px-6 bg-[#05070a] text-white overflow-hidden">
+		<div className="relative sm:py-24 pt-24 pb-10 px-6 bg-[#05070a] text-white overflow-hidden">
 			{/* Decorative Floating Blobs (Matching your image's aesthetic) */}
 			<div className="absolute top-1/4 right-1/4 w-64 h-64 bg-purple-600/10 blur-[120px] rounded-full animate-pulse" />
 			<div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-blue-600/10 blur-[150px] rounded-full animate-pulse delay-700" />
@@ -140,7 +140,7 @@ const ConnectSection = () => {
 				{/* Footer Copyright */}
 				<Footer/>
 			</div>
-		</section>
+		</div>
 	);
 };
 

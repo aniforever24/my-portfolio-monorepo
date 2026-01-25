@@ -51,7 +51,7 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="min-h-screen bg-[#05070a] text-white py-20 px-6 md:px-12 flex items-center">
+    <section className="min-h-screen bg-[#05070a] text-white sm:py-20 pt-20 pb-10 px-6 md:px-12 flex items-center">
       <motion.div 
         variants={containerVariants}
         initial="hidden"
@@ -72,7 +72,7 @@ const AboutSection = () => {
 					</h2>
           </motion.div>
 
-          <motion.p variants={itemVariants} className="text-gray-400 text-lg leading-relaxed max-w-xl text-justify">
+          <motion.p variants={itemVariants} className="text-gray-400 sm:text-lg text-sm leading-relaxed max-w-xl text-justify">
             I’m a self-taught full-stack MERN stack web developer who enjoys building modern, responsive, and engaging web applications using React, JavaScript, Node.js, Express, and MongoDB (Mongoose). I have a strong command of component-based UI development and semantic HTML, and I enjoy crafting clean interfaces with Tailwind CSS that feel intuitive and polished. I’m especially interested in enhancing user experience through thoughtful animations and micro-interactions, often using Framer Motion and modern UI patterns. On the backend, I’m comfortable designing real-world APIs and application logic, and I actively learn by building and iterating on practical projects. I’m driven by curiosity, continuous improvement, and the satisfaction of turning ideas into well-structured, usable products.
           </motion.p>
 

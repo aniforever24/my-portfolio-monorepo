@@ -94,7 +94,7 @@ const HeroSection = () => {
 	};
 
 	return (
-		<section className="sm:min-h-screen bg-transparent flex flex-col items-center justify-center gap-30 py-6 px-2">
+		<div className="sm:min-h-screen bg-transparent flex flex-col items-center justify-center gap-30 py-6 px-2">
 			<motion.div
 				variants={parent}
 				initial="hidden"
@@ -161,7 +161,7 @@ const HeroSection = () => {
 			<div className="">
 				<DancingArrow />
 			</div>
-		</section>
+		</div>
 	);
 };
 

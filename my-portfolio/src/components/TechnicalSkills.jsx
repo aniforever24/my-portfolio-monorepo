@@ -68,7 +68,7 @@ const TechnicalSkills = () => {
 	};
 
 	return (
-		<section className="py-24 px-6 bg-[#05070a] text-white">
+		<div className="sm:py-24 pt-24 pb-20 px-6 bg-[#05070a] text-white">
 			<div className="max-w-7xl mx-auto">
 				{/* Animated Header */}
 				<motion.div
@@ -124,7 +124,7 @@ const TechnicalSkills = () => {
 					))}
 				</motion.div>
 			</div>
-		</section>
+		</div>
 	);
 };
 

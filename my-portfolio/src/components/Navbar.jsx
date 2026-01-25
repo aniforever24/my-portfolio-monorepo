@@ -1,8 +1,15 @@
 import { useEffect, useState } from "react";
 import { twMerge } from "tailwind-merge";
 
-export default function Navbar({menuItems}) {
+export default function Navbar( { menuItems, sectionRefs } ) {
 	const [scrolled, setScrolled] = useState(false);
+	
+	const handleClick = (ind)=> {
+		sectionRefs[ind].current.scrollIntoView({
+			behavior: "smooth",
+			block: "start"
+		})
+	}
 
 	useEffect(() => {
 		const onScroll = () => {
@@ -26,18 +33,20 @@ export default function Navbar({menuItems}) {
 		>
 			<nav className="max-w-7xl mx-auto flex items-center justify-between px-8 py-4">
 				{/* Logo */}
-				<div className="font-bold text-xl text-gray-100">&lt; Animesh /&gt;</div>
+				<div className="font-bold text-xl text-gray-100">&lt; AS /&gt;</div>
 
 				{/* Links */}
 				<ul className={twMerge("flex gap-8 text-sm font-medium text-gray-400",
                     scrolled && "text-gray-300"
                 )}>
-					{menuItems.map((item) => (
+					{menuItems.map((item, i) => (
 						<li
 							key={item}
 							className="hover:text-white text-shadow cursor-pointer transition-colors "
 						>
-							<a className="font-[Poppins]">{item}</a>
+							<a className="font-[Poppins]" onClick={()=> handleClick(i)}>
+								{item}
+							</a>
 						</li>
 					))}
 				</ul>

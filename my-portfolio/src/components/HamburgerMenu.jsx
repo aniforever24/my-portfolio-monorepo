@@ -2,11 +2,20 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import './css/hamburgerMenu.css'
 
-const HamburgerMenu = ({ menuItems }) => {
+const HamburgerMenu = ({ menuItems, sectionRefs }) => {
 	const [isOpen, setIsOpen] = useState(false);
 
 	if (!menuItems) {
 		throw new Error("menuItems are required!");		
+	}
+
+	// Even handler
+	const handleClick = async (ind)=> {
+		setIsOpen(false)
+		sectionRefs[ind].current.scrollIntoView({
+			behavior: "smooth",
+			block: "start"
+		})
 	}
 
 	// Animation variants for the menu container
@@ -44,7 +53,7 @@ const HamburgerMenu = ({ menuItems }) => {
 		<nav className="fixed top-0 left-0 w-full z-50 p-6 flex justify-between items-center bg-[#05070a]/80 backdrop-blur-md">
 			{/* Logo Area */}
 			<div className="text-white font-bold text-xl tracking-tighter">
-				&lt; Animesh /&gt;
+				&lt; AS /&gt;
 			</div>
 
 			{/* The Hamburger Button */}
@@ -79,9 +88,8 @@ const HamburgerMenu = ({ menuItems }) => {
 						{menuItems.map((item, index) => (
 							<motion.a
 								key={item}
-								href={`#${item.toLowerCase()}`}
 								variants={itemVariants}
-								onClick={() => setIsOpen(false)}
+								onClick={()=> handleClick(index)}
 								className="text-3xl md:text-6xl font-bold text-gray-400 hover:text-white transition-colors relative group"
 							>
 								{/* Hover Gradient Effect */}

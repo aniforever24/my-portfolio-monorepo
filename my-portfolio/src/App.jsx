@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import TechnicalSkills from "./components/TechnicalSkills";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
@@ -20,45 +20,71 @@ import BackgroundGlow from "./components/BackgroundGlow";
 import ProjectsSection from "./components/ProjectsSection";
 
 const App = () => {
-	const menuItems = ["Home", "About", "Skills", "Projects", "Hobbies", "Connect"];
+	const menuItems = [
+		"Home",
+		"About",
+		"Skills",
+		"Projects",
+		"Hobbies",
+		"Connect",
+	];
 
+	const homeRef = useRef(null)
+	const aboutRef = useRef(null)
+	const skillsRef = useRef(null)
+	const projectsRef = useRef(null)
+	const hobbiesRef = useRef(null)
+	const connectRef = useRef(null)
+	
 	return (
 		<>
-			<BackgroundGlow/>
+			<BackgroundGlow />
 
 			<div className="h-500">
 				<div className="sm:block hidden">
-					<Navbar menuItems={menuItems} />
+					<Navbar menuItems={menuItems} sectionRefs={ [ homeRef, aboutRef, skillsRef, projectsRef, hobbiesRef, connectRef ] } />
 				</div>
 				<div className="sm:hidden block">
-					<HamburgerMenu menuItems={menuItems} />
+					<HamburgerMenu menuItems={menuItems} sectionRefs={ [ homeRef, aboutRef, skillsRef, projectsRef, hobbiesRef, connectRef ] } />
 				</div>
 
-				<HeroSection />
+				<section ref={homeRef}>
+					<HeroSection />
+				</section>
 
 				<WaveDivider />
 
-				<AboutMeSection />
+				<section ref={aboutRef}>
+					<AboutMeSection />
+				</section>
 
 				<LoopingDotDivider />
 
-				<TechnicalSkills />
+				<section ref={skillsRef}>
+					<TechnicalSkills />
+				</section>
 
 				<GlowingDivider centralGlow={false} />
 
-				<ProjectsSection/>
+				<section ref={projectsRef}>
+					<ProjectsSection />
+				</section>
 
 				<LoopingDotDivider />
 
-				<HobbiesSection />
+				<section ref={hobbiesRef}>
+					<HobbiesSection />
+				</section>
 
 				{/* <LoopingDotDivider/> */}
 
 				<ECGDivider />
 
-				<ConnectSection />
+				<section ref={connectRef}>
+					<ConnectSection />
+				</section>
 			</div>
-			<AIChatBot/>
+			<AIChatBot />
 		</>
 	);
 };

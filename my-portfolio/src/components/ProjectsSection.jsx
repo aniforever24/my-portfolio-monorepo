@@ -40,7 +40,7 @@ const repos = [
 
 const ProjectsSection = () => {
   return (
-    <section className="py-24 px-6 bg-[#05070a] text-white">
+    <div className="sm:py-24 pt-26 pb-10 px-6 bg-[#05070a] text-white">
       <div className="max-w-7xl mx-auto">
         
         {/* Top GitHub Sync Badge */}
@@ -149,7 +149,7 @@ const ProjectsSection = () => {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

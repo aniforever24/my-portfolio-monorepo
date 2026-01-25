@@ -66,7 +66,7 @@ const HobbiesSection = () => {
 	};
 
 	return (
-		<section className="py-24 px-6 bg-[#05070a] text-white overflow-hidden flex justify-center items-center min-h-150">
+		<div className="sm:py-24 pt-24 pb-10 px-6 bg-[#05070a] text-white overflow-hidden flex justify-center items-center min-h-150">
 			<div className="max-w-7xl mx-auto">
 				{/* Header with your signature animated gradient text */}
 				<motion.div
@@ -120,7 +120,7 @@ const HobbiesSection = () => {
 					))}
 				</motion.div>
 			</div>
-		</section>
+		</div>
 	);
 };
 

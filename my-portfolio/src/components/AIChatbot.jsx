@@ -22,12 +22,15 @@ const AIChatBot = () => {
     setInput('');
     setLoading(true);
 
+    const url = `${import.meta.env?.VITE_SERVER_URL}/api/chat`
+    
     try {
-      const res = await fetch('http://localhost:5000/api/chat', {
+      const res = await fetch(url, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: input, history: messages }),
       });
+      console.log('url:', url)
       const data = await res.json();
       setMessages(prev => [...prev, { role: 'model', parts: [{ text: data.text }] }]);
     } catch (err) {
