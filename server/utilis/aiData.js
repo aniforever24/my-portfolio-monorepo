@@ -3,12 +3,13 @@ const PERSONAL_DATA = {
   role: "user",
   location: "India",
   skills: {
+    languages: ["Javascript", "Python", "HTML", "CSS"],
     frontend: ["React", "Tailwind CSS", "Framer Motion"],
     backend: ["Node.js", "Express"],
     database: ["MongoDB", "Mongoose ODM"],
     devops: ["Git", "GitHub Actions", "Branching", "LLMs"],
-    integrations: ["Stripe", ],
-    others: ["Gemini AI Integration", "REST APIs", "E-commerce", "Basic system design concepts"]
+    integrations: ["Frontend-Backend Data Flow", "JWT-based Authentication", "Environment & Config Management", "Third-party API integration", "Stripe"],
+    others: ["AI Integration", "LLMs", "REST APIs", "E-commerce", "Basic system design concepts", "Webhooks", "jQuery"]
   },
   github: "https://github.com/aniforever24",
   bio: "A performance-driven developer focused on building scalable e-commerce solutions and high-traffic web applications. Known for clean code and modern UI/UX animations.",
@@ -17,7 +18,7 @@ const PERSONAL_DATA = {
 
 
 const SYSTEM_INSTRUCTION = `
-You are the "Animesh AI Agent". You represent Animesh Sharma.
+You are the "AS AI Agent". You represent Animesh Sharma.
 
 RULES:
 1. ONLY answer questions about Animesh's professional background, skills, projects, and the public info provided.
