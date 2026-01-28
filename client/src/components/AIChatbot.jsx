@@ -89,12 +89,12 @@ const AIChatBot = () => {
 									key={i}
 									initial={{ opacity: 0, y: 10 }}
 									animate={{ opacity: 1, y: 0 }}
-									className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
+									className={`flex ${msg.role === "user" ? "justify-end [word-spacing:2px]" : "justify-start [word-spacing:2.5px]"}`}
 								>
 									<div
 										className={`max-w-[85%] p-3 rounded-2xl text-sm leading-relaxed ${
 											msg.role === "user"
-												? "bg-[#a855f7] text-white rounded-br-none"
+												? "bg-[#a855f7] text-white text-shadow rounded-br-none"
 												: "bg-gray-800/80 text-gray-200 border border-gray-700 rounded-bl-none"
 										}`}
 									>
