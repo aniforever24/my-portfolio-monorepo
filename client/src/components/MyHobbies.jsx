@@ -20,19 +20,19 @@ const hobbies = [
 		title: "Meditation",
 		icon: <MeditationIcon size={24} />,
 		description:
-			"I enjoy meditation everyday keeps me energetic and calms my head.",
+			"I enjoy meditation everyday keeps me energetic and calms my mind.",
 	},
 	{
 		title: "Yoga",
 		icon: <YogaIcon size={24} />,
 		description:
-			"I follow padmasan and pranayam everyday. It helps calms my head and circulate +ive energy throughout my body and mind.",
+			"I follow padmasan and pranayam everyday. It helps calms my mind and circulate +ive energy throughout my body and mind.",
 	},
 	{
 		title: "Walking",
 		icon: <Footprints size={24} />,
 		description:
-			"I walk every day, soaking in the surrounding vibes while staying active.",
+			"I walk every day, soaking in the surrounding vibes while enjoyng fresh air around.",
 	},
 	{
 		title: "Learning & Experimenting",

@@ -26,7 +26,6 @@ const AIChatBot = () => {
 	}, [messages]);
 	useEffect(() => {
 		if (isOpen) {
-			console.log(inputRef.current);
 			inputRef.current.focus();
 		}
 	}, [isOpen]);
