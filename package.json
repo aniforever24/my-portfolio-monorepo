@@ -1,0 +1,21 @@
+{
+  "name": "portfolio-root",
+  "version": "1.0.0",
+  "description": "Monorepo structure for separate client and server apps",
+  "private": true,
+  "license": "ISC",
+  "author": "Animesh Sharma",
+  "type": "module",
+  "main": "README.json",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace=client\" \"npm run start --workspace=server\""
+  },
+  "dependencies": {
+    "concurrently": "^9.2.1",
+    "nodemon": "^3.1.11"
+  }
+}

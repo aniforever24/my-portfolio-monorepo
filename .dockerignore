@@ -1,0 +1,21 @@
+# Ignore all node_modules folders and some other folders anywhere in the project
+node_modules
+**/node_modules
+ignore
+**/ignore
+
+# Ignore all env files
+.env
+.env.*
+
+# Ignore git history
+.git
+.gitignore
+
+# Ignore build outputs 
+dist build client/dist
+client/build
+
+# Ignore OS-specifi trash files
+.DS_Store
+Thumbs.db
