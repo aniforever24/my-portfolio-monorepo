@@ -43,18 +43,6 @@ const ProjectsSection = () => {
     <div className="sm:py-24 pt-26 pb-10 px-6 bg-[#05070a] text-white">
       <div className="max-w-7xl mx-auto">
         
-        {/* Top GitHub Sync Badge */}
-        {/* <motion.div 
-          initial={{ opacity: 0, y: -10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          className="flex justify-center mb-6"
-        >
-          <div className="flex items-center gap-2 px-4 py-1.5 rounded-full border border-gray-800 bg-gray-900/50 text-gray-400 text-xs font-medium">
-            <Github size={14} />
-            <span>Synchronized with GitHub</span>
-          </div>
-        </motion.div> */}
-
         {/* Header Section */}
         <div className="text-center mb-16 space-y-4">
           <motion.h2 

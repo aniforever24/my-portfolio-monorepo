@@ -66,7 +66,7 @@ const HobbiesSection = () => {
 	};
 
 	return (
-		<div className="sm:py-24 pt-24 pb-10 px-6 bg-[#05070a] text-white overflow-hidden flex justify-center items-center min-h-150">
+		<div className="sm:py-24 pt-24 pb-10 px-6 bg-[#05070a] text-white overflow-hidden flex justify-center items-center min-h-180">
 			<div className="max-w-7xl mx-auto">
 				{/* Header with your signature animated gradient text */}
 				<motion.div
@@ -76,10 +76,10 @@ const HobbiesSection = () => {
 					className="text-center mb-16"
 				>
 					<h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight font-['Baloo_2']">
-						<span className="bg-clip-text text-transparent bg-linear-to-r from-[#717cf5] via-[#a855f7] to-[#f25c89] animate-gradient-flow bg-size-[200%_auto]">
-							My
-						</span>{" "}
-						Hobbies
+						My{" "}
+						<span className="bg-clip-text text-transparent bg-gradient-linear animate-smooth-flow [animation-duration:5s] bg-[length:200%_auto]">
+							Hobbies
+						</span>
 					</h2>
 				</motion.div>
 

@@ -55,10 +55,12 @@ const ConnectSection = () => {
 					className="text-center mb-16"
 				>
 					<h2 className="text-4xl md:text-5xl font-bold tracking-tight">
-						Connect With{" "}
-						<span className="bg-clip-text text-transparent bg-gradient-to-r from-[#717cf5] via-[#a855f7] to-[#f25c89] animate-gradient-flow bg-[length:200%_auto]">
-							Me
+						<span className="bg-clip-text text-transparent bg-gradient-linear animate-smooth-flow [animation-duration:5s] bg-[length:200%_auto]">
+						Connect 
 						</span>
+						{" "}
+						With
+							Me
 					</h2>
 				</motion.div>
 
