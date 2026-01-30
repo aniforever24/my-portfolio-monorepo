@@ -12,7 +12,7 @@
     "server"
   ],
   "scripts": {
-    "dev": "concurrently \"npm run dev --workspace=client\" \"npm run start --workspace=server\""
+    "dev": "concurrently --no-kill-others \"npm run dev --workspace=client\" \"npm run start --workspace=server\""
   },
   "dependencies": {
     "concurrently": "^9.2.1",

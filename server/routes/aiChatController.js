@@ -32,7 +32,7 @@ export const aiChatController = async (req, res) => {
         console.log('error:', error)
         res.status(500).json({
             success: false,
-            error: error?.message || JSON.stringify(error),
+            error: error?.message || "There is an error in fetching reply",
             message: 'Internal server error!'
         })
     }
