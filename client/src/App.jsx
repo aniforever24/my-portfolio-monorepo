@@ -15,7 +15,7 @@ import {
 	WaveDivider,
 } from "./components/ui/animations";
 import ConnectSection from "./components/ConnectSection";
-import AIChatBot from "./components/AIchatbot";
+import AIChatBot from "./components/AIChatbot";
 import BackgroundGlow from "./components/BackgroundGlow";
 import ProjectsSection from "./components/ProjectsSection";
 
