@@ -13,18 +13,21 @@ dotenv.config();
 
 const app = express();
 
+// CORS configuration
+app.use(cors(corsOptions))
+app.options('*', cors(corsOptions))
+
+// Helmet setup
+app.use(helmet(helmentConfig))
+
+// Body parsing
 app.use(express.json());
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-// CORS configuration
-app.use(cors(corsOptions))
-
 // Morgan logger middleware setup
 app.use(morganConfig(morganFormat))
 
-// Helmet setup
-app.use(helmet(helmentConfig))
 
 // Routes
 app.get('/health', (req, res) => {
