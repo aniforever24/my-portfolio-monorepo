@@ -29,23 +29,62 @@ const App = () => {
 		"Connect",
 	];
 
-	const homeRef = useRef(null)
-	const aboutRef = useRef(null)
-	const skillsRef = useRef(null)
-	const projectsRef = useRef(null)
-	const hobbiesRef = useRef(null)
-	const connectRef = useRef(null)
-	
+	const homeRef = useRef(null);
+	const aboutRef = useRef(null);
+	const skillsRef = useRef(null);
+	const projectsRef = useRef(null);
+	const hobbiesRef = useRef(null);
+	const connectRef = useRef(null);
+
+	const wakeServer = async () => {
+		try {
+			const response = await fetch(`${import.meta.env.VITE_SERVER_URL}/health`);
+			if(!response.ok) {
+				console.log('Server health check error status:', response.status)
+				return
+			}
+			const data = await response.json();
+			console.log('Server health check:', data);
+
+		} catch (error) {
+			console.log("error in waking server:", error);
+		}
+	};
+
+	useEffect(() => {
+		wakeServer()
+	}, []);
+
 	return (
 		<>
 			<BackgroundGlow />
 
 			<div className="h-500">
 				<div className="sm:block hidden">
-					<Navbar menuItems={menuItems} sectionRefs={ [ homeRef, aboutRef, skillsRef, projectsRef, hobbiesRef, connectRef ] } />
+					<Navbar
+						menuItems={menuItems}
+						sectionRefs={[
+							homeRef,
+							aboutRef,
+							skillsRef,
+							projectsRef,
+							hobbiesRef,
+							connectRef,
+						]}
+					/>
 				</div>
 				<div className="sm:hidden block">
-					<HamburgerMenu menuItems={menuItems} sectionRefs={ [ homeRef, aboutRef, skillsRef, projectsRef, hobbiesRef, connectRef ] } />
+					<HamburgerMenu
+						menuItems={menuItems}
+						sectionRefs={[
+							homeRef,
+							aboutRef,
+							skillsRef,
+							projectsRef,
+							hobbiesRef,
+							connectRef,
+						]}
+					/>
 				</div>
 
 				<section ref={homeRef}>
