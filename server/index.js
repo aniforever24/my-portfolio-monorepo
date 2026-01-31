@@ -15,7 +15,6 @@ const app = express();
 
 // CORS configuration
 app.use(cors(corsOptions))
-app.options('*', cors(corsOptions))
 
 // Helmet setup
 app.use(helmet(helmentConfig))
