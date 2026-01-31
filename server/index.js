@@ -27,8 +27,8 @@ app.use(morganConfig(morganFormat))
 app.use(helmet(helmentConfig))
 
 // Routes
-app.get('/testing', (req, res) => {
-    res.send('Server is working fine 👍')
+app.get('/health', (req, res) => {
+  res.status(200).json({ status: 'ok' })
 });
 app.post('/api/chat', aiChatController);
 
@@ -40,9 +40,9 @@ app.use((req, res) => {
 });
 
 
-app.listen(process.env.PORT, (err) => {
-    if (err) {
-        return console.log(err)
-    }
-    console.log(`Server is running successfully @${process.env.PORT} 👍`)
+app.listen(process.env.PORT || 3000, (err) => {
+  if (err) {
+    return console.log(err)
+  }
+  console.log(`Server is running successfully @${process.env.PORT} 👍`)
 })

@@ -8,7 +8,7 @@
   "type": "module",
   "main": "README.json",
   "scripts": {
-    "dev": "concurrently --no-kill-others \"npm --prefix client run dev\" \"npm --prefix server run start\""
+    "dev": "concurrently --no-kill-others \"npm --prefix client run dev\" \"npm --prefix server run dev\""
   },
   "dependencies": {
     "concurrently": "^9.2.1",
