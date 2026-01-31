@@ -37,22 +37,22 @@ const App = () => {
 	const connectRef = useRef(null);
 
 	const wakeServer = async () => {
-		try {
-			const response = await fetch(`${import.meta.env.VITE_SERVER_URL}/health`);
-			if(!response.ok) {
-				console.log('Server health check error status:', response.status)
-				return
-			}
-			const data = await response.json();
-			console.log('Server health check:', data);
+		const hasWokenServer = sessionStorage.getItem("server_woken");
 
+		if (hasWokenServer) return;
+
+		const url = `${import.meta.env.VITE_SERVER_URL}/health`;
+
+		try {
+			fetch( url, { keepalive: true, cache: "no-store" }).catch((er) => {});
+			sessionStorage.setItem("server_woken", "true");
 		} catch (error) {
 			console.log("error in waking server:", error);
 		}
 	};
 
 	useEffect(() => {
-		wakeServer()
+		wakeServer();
 	}, []);
 
 	return (
